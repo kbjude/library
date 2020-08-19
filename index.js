@@ -24,8 +24,12 @@ addBook.addEventListener('click', addBookToLibrary);
 
 function render(books) {
     for (let book = 0; book < books.length; book++){ 
-        const container = document.getElementById('bookcontainer')
-        const card = document.createElement('div')
+        const container = document.getElementById('bookcontainer');
+        const card = document.createElement('div');
+        card.classList('card', 'column' , 'is-4');
+        container.append(card);
+        const bookTitle = document.createElement('h1');
+        bookTitle.innerHTML = title
        const {
            title, author, pages, readStatus 
        } = books[book]
