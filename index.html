@@ -7,20 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="column" id="addbook">
-        <label for="title">Title</label>
-        <input id="title" type="text" class="input">
-        <label for="author">Author</label>
-        <input id="author" type="text" class="input">
-        <label for="pages">Pages</label>
-        <input id="pages" type="number" class="input">
-        <label for="readStatus">Read Status</label>
-        <input id="readStatus" type="text" class="input">
-    </form>
+    <div class="columns is-centered">
+        <form class="column is-4" id="addbook">
+            <div class="field">
+                <label for="title">Title</label>
+                <input id="title" type="text" class="input">
+            </div>
+            <div class="field">
+                <label for="author">Author</label>
+                <input id="author" type="text" class="input">
+            </div>
+            <div class="field">
+                <label for="pages">Pages</label>
+                <input id="pages" type="number" class="input">
+            </div>
+            <div class="field">
+                <label for="readStatus">Read Status</label>
+                <input id="readStatus" type="text" class="input">
+            </div>
+            <button id="add-book-btn" class="button is-primary" type="button">
+                Add Book
+            </button>  
+        </form>
+    </div>
 
-    <button id="add-book-btn" class="button is-primary" >Add Book</button>
-    <br>
-    <br>
+      
     <div class="columns is-multiline" id="bookcontainer">
         
     </div>
