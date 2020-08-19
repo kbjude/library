@@ -17,7 +17,7 @@ function addBookToLibrary() {
   const newBook = new Book(newTitle, newAuthor, newPages, newReadStatus);
   myLibrary.push(newBook);
   document.getElementById("addbook").reset()
-
+  render(myLibrary)
 }
 
 addBook.addEventListener('click', addBookToLibrary);
