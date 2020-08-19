@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form class="column">
         <label for="title">Title</label>
-        <input id="title" type="text">
+        <input id="title" type="text" class="input">
         <label for="author">Author</label>
-        <input id="author" type="text">
+        <input id="author" type="text" class="input">
         <label for="pages">Pages</label>
-        <input id="pages" type="number">
+        <input id="pages" type="number" class="input">
         <label for="readStatus">Read Status</label>
-        <input id="readStatus" type="text">
+        <input id="readStatus" type="text" class="input">
     </form>
+
     <button id="add-book-btn">Add Book</button>
+    <br>
+    <br>
+    <div class="columns">
+        <div class="card column is-4">
+            <h1> Our title </h1>
+        </div>
+    </div>
+
     <script src="index.js"></script> 
 </body>
 </html>
