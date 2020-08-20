@@ -7,8 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1 class="navbar-item title is-3">Library</h1>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <button class="button" type="button" id="show-form-btn">Show Form</button>
+            </div>
+        </div>
+    </nav>
     <div class="columns is-centered">
-        <form class="column is-4" id="addbook">
+        <form class="column is-4 is-hidden" id="addbook">
             <div class="field">
                 <label for="title">Title</label>
                 <input id="title" type="text" class="input">

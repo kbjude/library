@@ -1,5 +1,6 @@
 const myLibrary = [];
 const addBook = document.getElementById('add-book-btn');
+const showFormBtn = document.getElementById('show-form-btn');
 
 function Book(title, author, pages, readStatus) {
   this.title = title;
@@ -9,19 +10,46 @@ function Book(title, author, pages, readStatus) {
 }
 
 function render(books) {
-  for (let book = 0; book < books.length; book += 1) {
+  const lastBookIndex = myLibrary.length - 1;
+  for (let book = lastBookIndex; book < books.length; book += 1) {
     const
       {
         title, author, pages, readStatus 
       } = books[book];
+    // Create elements
+
     const container = document.getElementById('bookcontainer');
     const card = document.createElement('div');
-    card.classList.add('card', 'column', 'is-4');
-    container.append(card);
+    const cardContent = document.createElement('div');
     const bookTitle = document.createElement('h1');
-    bookTitle.classList.add('title', 'is-3');
+    const bookAuthor = document.createElement('h3');
+    const bookPages = document.createElement('h4');
+    const bookReadStatus = document.createElement('h4');
+    const readStatusText = document.createElement('h4');
+
+    // Class additions
+
+    card.classList.add('card', 'column', 'is-4');
+    cardContent.classList.add('card-content');
+    bookAuthor.classList.add('title', 'is-5', 'has-text-centered');
+    bookTitle.classList.add('title', 'is-3', 'box');
+    bookPages.classList.add('title', 'is-6', 'has-text-centered');
+    bookReadStatus.classList.add('title', 'is-6', 'has-text-centered');
+    readStatusText.classList.add('title', 'is-6', 'has-text-centered');
+
+    // Inner HTML declarations
+
     bookTitle.innerHTML = title;
-    card.append(title);
+    bookAuthor.innerHTML = author;
+    bookPages.innerHTML = `${pages} pages`;
+    bookReadStatus.innerHTML = readStatus;
+    readStatusText.innerHTML = 'Already read?';
+
+    // Appends
+
+    container.append(card);
+    card.append(cardContent);
+    cardContent.append(bookTitle, bookAuthor, bookPages, readStatusText, bookReadStatus);
   }
 }
 
@@ -37,4 +65,10 @@ function addBookToLibrary() {
   render(myLibrary);
 }
 
+function showForm() {
+  const form = document.getElementById('addbook');
+  form.classList.toggle('is-hidden');
+}
+
 addBook.addEventListener('click', addBookToLibrary);
+showFormBtn.addEventListener('click', showForm);
