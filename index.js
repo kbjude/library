@@ -9,6 +9,12 @@ function Book(title, author, pages, readStatus) {
   this.readStatus = readStatus;
 }
 
+// function deleteBook(button) {
+//   const bookIndex = button.getAttribute('data-index');
+//   myLibrary.splice(bookIndex, 1);
+
+// }
+
 function render(books) {
   const lastBookIndex = myLibrary.length - 1;
   for (let book = lastBookIndex; book < books.length; book += 1) {
@@ -27,7 +33,14 @@ function render(books) {
     const bookReadStatus = document.createElement('h4');
     const readStatusText = document.createElement('h4');
     const deleteBookBtn = document.createElement('button');
-    deleteBookBtn.setAttribute('data-index', `${book}`);
+    card.setAttribute('data-index', `${book}`);
+
+    deleteBookBtn.addEventListener('click', (e) => {
+      const bookIndex = card.getAttribute('data-index');
+      const cardToDelete = e.currentTarget.parentNode.parentNode;
+      cardToDelete.remove();
+      myLibrary.splice(bookIndex, 1);
+    });
 
     // Class additions
 
@@ -53,7 +66,8 @@ function render(books) {
 
     container.append(card);
     card.append(cardContent);
-    cardContent.append(bookTitle, bookAuthor, bookPages, readStatusText, bookReadStatus, deleteBookBtn);
+    cardContent.append(bookTitle, bookAuthor,
+      bookPages, readStatusText, bookReadStatus, deleteBookBtn);
   }
 }
 
