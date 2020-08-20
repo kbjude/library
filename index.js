@@ -26,6 +26,7 @@ function render(books) {
     const bookPages = document.createElement('h4');
     const bookReadStatus = document.createElement('h4');
     const readStatusText = document.createElement('h4');
+    const deleteBookBtn = document.createElement('button');
 
     // Class additions
 
@@ -36,6 +37,7 @@ function render(books) {
     bookPages.classList.add('title', 'is-6', 'has-text-centered');
     bookReadStatus.classList.add('title', 'is-6', 'has-text-centered');
     readStatusText.classList.add('title', 'is-6', 'has-text-centered');
+    deleteBookBtn.classList.add('button', 'is-danger');
 
     // Inner HTML declarations
 
@@ -44,12 +46,13 @@ function render(books) {
     bookPages.innerHTML = `${pages} pages`;
     bookReadStatus.innerHTML = readStatus;
     readStatusText.innerHTML = 'Already read?';
+    deleteBookBtn.innerHTML = 'Delete Book';
 
     // Appends
 
     container.append(card);
     card.append(cardContent);
-    cardContent.append(bookTitle, bookAuthor, bookPages, readStatusText, bookReadStatus);
+    cardContent.append(bookTitle, bookAuthor, bookPages, readStatusText, bookReadStatus, deleteBookBtn);
   }
 }
 
@@ -64,6 +67,7 @@ function addBookToLibrary() {
   document.getElementById('addbook').reset();
   render(myLibrary);
 }
+
 
 function showForm() {
   const form = document.getElementById('addbook');
