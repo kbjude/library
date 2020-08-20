@@ -28,6 +28,7 @@ function render(books) {
     const readStatusText = document.createElement('h4');
     const deleteBookBtn = document.createElement('button');
 
+    card.setAttribute('data-index', `${book}`);
     // Class additions
 
     card.classList.add('card', 'column', 'is-4');
@@ -56,6 +57,11 @@ function render(books) {
   }
 }
 
+function getIndex(newBook) {
+  console.log(myLibrary.indexOf(newBook));
+}
+
+
 function addBookToLibrary() {
   const newTitle = document.getElementById('title').value;
   const newAuthor = document.getElementById('author').value;
@@ -65,9 +71,9 @@ function addBookToLibrary() {
   const newBook = new Book(newTitle, newAuthor, newPages, newReadStatus);
   myLibrary.push(newBook);
   document.getElementById('addbook').reset();
+  getIndex(newBook);
   render(myLibrary);
 }
-
 
 function showForm() {
   const form = document.getElementById('addbook');
