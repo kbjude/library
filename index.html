@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -18,24 +19,27 @@
         </div>
     </nav>
     <div class="columns is-centered">
-        <form class="column is-4 is-hidden" id="addbook">
+        <form class="column is-4 is-hidden mt-50" id="addbook">
             <div class="field">
-                <label for="title">Title</label>
+                <label for="title" class="label">Title</label>
                 <input id="title" type="text" class="input">
             </div>
             <div class="field">
-                <label for="author">Author</label>
+                <label for="author" class="label">Author</label>
                 <input id="author" type="text" class="input">
             </div>
             <div class="field">
-                <label for="pages">Pages</label>
+                <label for="pages" class="label">Pages</label>
                 <input id="pages" type="number" class="input">
             </div>
             <div class="field">
-                <label for="readStatus">Read Status</label>
-                <input id="readStatus" type="text" class="input">
+                <label class="label" for="read">Have you read it yet?</label>
+                <label class="switch mt-20">
+                    <input type="checkbox" id="readStatus">
+                    <span class="slider round"></span>
+                </label>
             </div>
-            <button id="add-book-btn" class="button is-primary" type="button">
+            <button id="add-book-btn" class="button is-primary mt-20" type="button">
                 Add Book
             </button>  
         </form>
