@@ -23,12 +23,13 @@ Some of the features of this project include but not limited to:
 Technologies Used
 Vanilla JS
 
-Contributors
+### Contributors
+
 Jude Kajura
 
-GitHub: [@kbjude] (https://github.com/kbjude)
-Twitter:[@balindakj] (https://twitter.com/balindakj)
-LinkedIn]: [kajura-jude] (https://www.linkedin.com/feed/)
+- GitHub: [@kbjude] (https://github.com/kbjude)
+- Twitter:[@balindakj] (https://twitter.com/balindakj)
+- LinkedIn]: [kajura-jude] (https://www.linkedin.com/feed/)
 
 👤 **Fernando Bahamondes**
 
