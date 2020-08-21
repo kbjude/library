@@ -9,6 +9,10 @@ function Book(title, author, pages, readStatus) {
   this.readStatus = readStatus;
 }
 
+Book.prototype.changeReadStatus = function changeReadStatus() {
+  this.readStatus = !this.readStatus;
+};
+
 function render(books) {
   const lastBookIndex = myLibrary.length - 1;
   for (let book = lastBookIndex; book < books.length; book += 1) {
@@ -39,6 +43,11 @@ function render(books) {
       const cardToDelete = e.currentTarget.parentNode.parentNode;
       cardToDelete.remove();
       myLibrary.splice(bookIndex, 1);
+    });
+
+    readSwitchInput.addEventListener('click', () => {
+      const bookIndex = card.getAttribute('data-index');
+      myLibrary[bookIndex].changeReadStatus();
     });
 
     // Class additions
