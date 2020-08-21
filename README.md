@@ -1,5 +1,5 @@
 # Library
-This is a collaborative project aimed allowing users to add manage their use of books. It helps the user look/add a list of books, mark them as books they have read or not, look at the pages they have read and many others. The data here is non persistent and knowledge being checked for is an understanding od Data structures.
+This is a collaborative project aimed at allowing users to manage their books. It helps the user look/add a list of books, mark them as books they have read or not, look at the pages they have read, and many others. The data here is non-persistent and knowledge being checked for is an understanding of Data structures.
 
 ### Requirements
 Download the application and ensure that you have node modules installed. 
@@ -13,27 +13,33 @@ Some of the features of this project include but not limited to:
 - Showing the Form
 - Hiding the form
 
+### Screenshots
+
+![Screenshot](https://user-images.githubusercontent.com/52765379/90913925-f86c1600-e3aa-11ea-8bdc-3f9393af88bf.png)
+
 ### Using the System
-- Clone the project off github to your local computer
+- Clone the project off GitHub to your local computer
 - Be sure to add the live server extension of VScode if you are using that
-- Live server will run the code for you in your default browser
+- The live server will run the code for you in your default browser
 
-[Live Link] { https://cryptic-journey-83932.herokuapp.com/sessions/new }
+[ Netlify Live Link](https://javascriptbooklibrary.netlify.app/)
 
-Technologies Used
-Vanilla JS
+### Technologies Used
+
+- Vanilla JS
+- HTML
+- CSS
 
 ### Contributors
 
 👤 **Jude Kajura**
 
-- GitHub: [@kbjude] (https://github.com/kbjude)
-- Twitter:[@balindakj] (https://twitter.com/balindakj)
-- LinkedIn]: [kajura-jude] (https://www.linkedin.com/feed/)
+- GitHub: [@kbjude](https://github.com/kbjude)
+- Twitter:[@balindakj](https://twitter.com/balindakj)
+- LinkedIn: [kajura-jude](https://www.linkedin.com/feed/)
 
 👤 **Fernando Bahamondes**
 
 - Github: [@ferbaco86](https://github.com/ferbaco86)
 - Twitter: [@ferbac0](https://twitter.com/ferbac0)
-- Linkedin: [linkedin](https://www.linkedin.com/in/fernando-bahamondes-correa)
-
+- LinkedIn: [fernando-bahamondes](https://www.linkedin.com/in/fernando-bahamondes-correa)
