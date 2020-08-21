@@ -25,7 +25,7 @@ Vanilla JS
 
 ### Contributors
 
-Jude Kajura
+👤 **Jude Kajura**
 
 - GitHub: [@kbjude] (https://github.com/kbjude)
 - Twitter:[@balindakj] (https://twitter.com/balindakj)
