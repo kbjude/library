@@ -22,7 +22,9 @@ Some of the features of this project include but not limited to:
 - Be sure to add the live server extension of VScode if you are using that
 - The live server will run the code for you in your default browser
 
-[ Netlify Live Link](https://javascriptbooklibrary.netlify.app/)
+### Live Version
+
+- [ Netlify Live Link](https://javascriptbooklibrary.netlify.app/)
 
 ### Technologies Used
 
