@@ -13,6 +13,20 @@ Book.prototype.changeReadStatus = function changeReadStatus() {
   this.readStatus = !this.readStatus;
 };
 
+const validation = (inputTitle, inputAuthor, inputPages) => {
+  const alertMessageDiv = document.getElementById('alertMessage');
+  let valid;
+  if (inputTitle.validity.valueMissing
+    || inputAuthor.validity.valueMissing || inputPages.validity.valueMissing) {
+    alertMessageDiv.classList.remove('is-hidden');
+    valid = false;
+  } else {
+    alertMessageDiv.classList.add('is-hidden');
+    valid = true;
+  }
+  return valid;
+};
+
 function render(books) {
   const lastBookIndex = myLibrary.length - 1;
   for (let book = lastBookIndex; book < books.length; book += 1) {
@@ -83,15 +97,18 @@ function render(books) {
 
 
 function addBookToLibrary() {
-  const newTitle = document.getElementById('title').value;
-  const newAuthor = document.getElementById('author').value;
-  const newPages = document.getElementById('pages').value;
-  const newReadStatus = document.getElementById('readStatus').checked;
+  const newTitle = document.getElementById('title');
+  const newAuthor = document.getElementById('author');
+  const newPages = document.getElementById('pages');
+  const newReadStatus = document.getElementById('readStatus');
 
-  const newBook = new Book(newTitle, newAuthor, newPages, newReadStatus);
-  myLibrary.push(newBook);
-  document.getElementById('addbook').reset();
-  render(myLibrary);
+  const newBook = new Book(newTitle.value, newAuthor.value, newPages.value, newReadStatus.checked);
+
+  if (validation(newTitle, newAuthor, newPages) === true) {
+    myLibrary.push(newBook);
+    document.getElementById('addbook').reset();
+    render(myLibrary);
+  }
 }
 
 function showForm() {
@@ -104,6 +121,7 @@ function showForm() {
     button.innerHTML = 'Show Form';
   }
 }
+
 
 addBook.addEventListener('click', addBookToLibrary);
 showFormBtn.addEventListener('click', showForm);
