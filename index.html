@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1 class="navbar-item title is-3">Library</h1>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <button class="button" type="button" id="show-form-btn">Show Form</button>
+            </div>
+        </div>
+    </nav>
+    <div class="columns is-centered">
+        <form class="column box is-4 is-hidden mt-50" id="addbook">
+            <div class="field">
+                <label for="title" class="label">Title</label>
+                <input id="title" type="text" class="input">
+            </div>
+            <div class="field">
+                <label for="author" class="label">Author</label>
+                <input id="author" type="text" class="input">
+            </div>
+            <div class="field">
+                <label for="pages" class="label">Pages</label>
+                <input id="pages" type="number" class="input">
+            </div>
+            <div class="field">
+                <label class="label" for="read">Have you read it yet?</label>
+                <label class="switch mt-20">
+                    <input type="checkbox" id="readStatus">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button id="add-book-btn" class="button is-primary mt-20" type="button">
+                Add Book
+            </button>  
+        </form>
+    </div>
+
+      
+    <div class="columns is-multiline mt-50" id="bookcontainer">
+        
+    </div>
+
+    <script src="index.js"></script> 
+</body>
+</html>
