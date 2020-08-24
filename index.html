@@ -20,17 +20,20 @@
     </nav>
     <div class="columns is-centered">
         <form class="column box is-4 is-hidden mt-50" id="addbook">
+            <div id ="alertMessage" class="notification is-danger is-hidden">
+                <h5 class="title is-5 has-text-centered">All fields required!</h5>
+            </div>
             <div class="field">
                 <label for="title" class="label">Title</label>
-                <input id="title" type="text" class="input">
+                <input id="title" type="text" class="input" required>
             </div>
             <div class="field">
                 <label for="author" class="label">Author</label>
-                <input id="author" type="text" class="input">
+                <input id="author" type="text" class="input" required>
             </div>
             <div class="field">
                 <label for="pages" class="label">Pages</label>
-                <input id="pages" type="number" class="input">
+                <input id="pages" type="number" class="input" min="0" required>
             </div>
             <div class="field">
                 <label class="label" for="read">Have you read it yet?</label>
@@ -41,7 +44,7 @@
             </div>
             <button id="add-book-btn" class="button is-primary mt-20" type="button">
                 Add Book
-            </button>  
+            </button>
         </form>
     </div>
 
